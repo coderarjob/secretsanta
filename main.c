@@ -1,3 +1,12 @@
+/*
+* Reads names from the standard input and randomly creates pairs, each pair
+* includes a secret santa and the name of the person who he/she must give gift
+* to.
+* Output is in the format of a DOT file (read in wikipedia)
+*
+* Author: Arjob Mukherjee (arjobmukherjee@gmail.com)
+* Dated: 23/12/2018
+*/
 #include<stdio.h>
 #include<stdlib.h> //for calloc
 #include"ss.h"
@@ -13,7 +22,7 @@ int main()
 	int length;
 
 	length = readNames(&names);
-	printf("Names count: %d\n", length);
+	printf("// Names count: %d\n", length);
 
 	/*
 		length+1, because, the graph vector must have palce for the last
@@ -37,9 +46,9 @@ int main()
 		thus if we graph+1 will always point to a valid memory, as long we
 		itterate from o to length -1.
 
-		index	   index+1		isExists
+		index      index+1     isExists
 		-----      ---------   ---------
-		0		   1			true
+		0          1            true
 		1          2            true
 		length-1   length       true
 	*/
