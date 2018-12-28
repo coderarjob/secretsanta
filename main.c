@@ -2,7 +2,8 @@
 * Reads names from the standard input and randomly creates pairs, each pair
 * includes a secret santa and the name of the person who he/she must give gift
 * to.
-* Output is in the format of a DOT file (read in wikipedia)
+* Output is in the format of a DOT file
+* (https://en.wikipedia.org/wiki/DOT_%28graph_description_language)
 *
 * Author: Arjob Mukherjee (arjobmukherjee@gmail.com)
 * Dated: 23/12/2018
