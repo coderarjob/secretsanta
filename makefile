@@ -1,16 +1,15 @@
 # Make file to build secret santa application
 
-santa: main.o getRandom.o readNames.o
-	gcc -o santa main.o getRandom.o readNames.o
+objects = main.o getRandom.o readNames.o
 
-main.o: main.c ss.h
-	gcc -c main.c
+santa:$(objects)
+	gcc -o santa $(objects)
 
-getRandom.o: getRandom.c ss.h
-	gcc -c getRandom.c
-
-readNames.o: readNames.c ss.h
-	gcc -c readNames.c
-
+# Implicit rules are used here.
+# Learn more about here
+# (https://www.gnu.org/software/make/manual/make.html#Rule-Introduction)
+main.o: ss.h
+getRandom.o: ss.h
+readNames.o: ss.h
 clean:
-	rm santa main.o getRandom.o readNames.o
+	rm -f santa main.o getRandom.o readNames.o
