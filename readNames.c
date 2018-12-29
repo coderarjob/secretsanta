@@ -20,13 +20,6 @@ int readNames(char ***names)
 
 		// copy the read string
 		strcpy(*currentLine, line);
-		
-		/*printf("line: %s\n\n", *currentLine);
-		char *t = *currentLine;
-		for(int i = strlen(currentLine);*t;t++)
-			printf("%d, %c > ", *t, *t);
-
-		printf("\n\n");*/
 
 		// increment count
 		currentLine++;
