@@ -15,11 +15,18 @@ int readNames(char ***names)
 	
 	while(scanf("%s\n",line)> 0)
 	{
-		//create storage for the line
-		*currentLine = malloc(sizeof(char *) * strlen(line));
+		//create storage for the line, + 1 is needed for the EOL charracter.
+		*currentLine = malloc(sizeof(char) * (strlen(line) + 1 ));
 
 		// copy the read string
 		strcpy(*currentLine, line);
+		
+		/*printf("line: %s\n\n", *currentLine);
+		char *t = *currentLine;
+		for(int i = strlen(currentLine);*t;t++)
+			printf("%d, %c > ", *t, *t);
+
+		printf("\n\n");*/
 
 		// increment count
 		currentLine++;
